@@ -17,11 +17,17 @@
 #include "sum_array.h"
 
 int sum_array(int *arr, int size) {
+    int sum = 0;
+    
+    for (int i = 0; i< size ; i++) {
+    	sum += *arr;
+    	arr++;
+    	}
     // TODO: Implement the sum using pointer arithmetic
     // Hint: Initialize a pointer to the start of the array, set sum to 0, loop over the size adding the dereferenced pointer value and incrementing the pointer.
 
     // Placeholder
-    return 0;
+    return sum;
 }
 
 int main() {
@@ -31,7 +37,7 @@ int main() {
 
     // TODO: Call sum_array(nums, 4)
 
-    int result = 0; // Replace with actual call
+    int result = sum_array(nums, 4); // Replace with actual call
 
     printf("Sum of array: %d\n", result);
 

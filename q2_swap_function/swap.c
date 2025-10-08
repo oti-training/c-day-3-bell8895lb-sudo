@@ -16,12 +16,19 @@
 #include <stdio.h>
 #include "swap.h"
 
-void swap(int *a, int *b) {
-    // TODO: Implement the swap logic here
+void swap(int *a, int *b) { 
+    if (a == NULL || b == NULL) {
+    printf("Swap function not implemented yet.\n");
+    }
+    else {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    } // TODO: Implement the swap logic here
     // Hint: Use a temporary variable to hold the value pointed to by one pointer, then assign the value from the other pointer, and finally assign the temporary value to the second pointer. Remember to dereference with *.
 
     // Placeholder
-    printf("Swap function not implemented yet.\n");
+   
 }
 
 int main() {
@@ -32,7 +39,7 @@ int main() {
 
     printf("Before swap: x=%d, y=%d\n", x, y);
 
-    // TODO: Call swap(&x, &y);
+    swap(&x,&y);  // TODO: Call swap(&x, &y);
 
     printf("After swap: x=%d, y=%d\n", x, y);
 

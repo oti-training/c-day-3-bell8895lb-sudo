@@ -17,12 +17,18 @@
 #include <stdio.h>
 
 int main() {
-    // TODO: Implement the exercise here
-    // Hint: Remember to use & for addresses and * for dereferencing. Declare a float, point to it, print value and address, modify via pointer, print again.
+    float variable_temp = 25.5;
+    float * variable_temp_ptr;
+    variable_temp_ptr = &variable_temp; // TODO: Implement the exercise here
+    
+    printf("Exercise 1: Basic Float Pointer\n");
+    printf ("Value: %.1f\n", variable_temp);
+    printf ("Address: %p\n", (void*)variable_temp_ptr);
+    
+    * variable_temp_ptr = 30.0;
+    printf("New value : %.1f\n", variable_temp); // Hint: Remember to use & for addresses and * for dereferencing. Declare a float, point to it, print value and address, modify via pointer, print again.
 
     // Placeholder - replace with your implementation
-    printf("Exercise 1: Basic Float Pointer\n");
-    printf("Implement the TODO above to see correct output.\n");
 
     return 0;
 }
